@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido"
+        android:textColor="@color/primario"
+        android:textSize="28sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inicia Sesion con tu cuenta"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Correo Electronico"
+        android:layout_margin="16dp"
+        app:boxStrokeColor="@color/primario"
+        app:hintTextColor="@color/primario">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/campo_correo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contrasena"
+        app:boxStrokeColor="@color/primario"
+        android:layout_margin="16dp"
+        app:hintTextColor="@color/primario"
+        app:endIconMode="password_toggle"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/campo_contra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_ingresar"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/primario"
+            android:textColor="@color/fondo"
+            android:layout_margin="4dp"
+            android:text="Ingresar"/>
+        <Button
+            android:id="@+id/btn_registrar"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/primario"
+            android:textColor="@color/fondo"
+            android:layout_margin="4dp"
+            android:text="Registrarse"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/btn_contrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Olvidaste la contrasena"
+        android:textColor="@color/text"
+        android:textAlignment="center"
+        android:textSize="18sp"/>
+
+</LinearLayout>
